@@ -3,7 +3,7 @@ name: GitHub CI
 on: [push, pull_request]
 
 jobs:
-  basic (gcc):
+  basic_gcc:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
     - name: make doc-nits
       run: make doc-nits
 
-  basic (clang):
+  basic_clang:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -49,7 +49,7 @@ jobs:
     - name: make test
       run: OPENSSL_TEST_RAND_ORDER=0 make test
 
-  enable non-default options:
+  enable_non-default_options:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -60,7 +60,7 @@ jobs:
     - name: make test
       run: make test
 
-  legacy and no-asm:
+  legacy_and_no-asm:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
